@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона»
 
 * Студент: [Ольга Зиборова](https://up.htmlacademy.ru/htmlcss/26/user/1047627).
-* Наставник: `Иван Мулярчик https://htmlacademy.ru/profile/ivanmuliarchyk`.
+* Наставник: [Иван Мулярчик](https://htmlacademy.ru/profile/ivanmuliarchyk).
 
 ---
 
