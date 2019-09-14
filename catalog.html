@@ -27,7 +27,67 @@
       </h1>
       <section class="filter">
         <h2>Выбираем нужный вариант.</h2>
-        <!-- дальше будут формы -->
+        <!--формa -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post"">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="pool" checked>
+                Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="parking">
+                Парковка</label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="hotel" checked>
+                Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                Мотель</label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input class="filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="range">
+            <legend>Стоимость в сутки (р):</legend>
+
+            <div class="price-controls">
+              <label class="minimum-value">от <input type="text" name="minimum-value" value="0"></label>
+              <label class="maximum-value">до <input type="text" name="maximum-value" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button type="submit" class="filter-button button">Показать</button>
+          </fieldset>
+
+        </form>
       </section>
       <section class="sort">
         <h2>Отбираем по цене, типу или рейтингу.</h2>
