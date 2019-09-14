@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="" lang="ru">
+   <head>
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     <title>HTML Academy: Седона</title>
+     <link href="css/style.css" rel="stylesheet">
+   </head>
+
+<body>
+      <section class="search-form-sedona">
+        <h2 class="hidden">Форма поиска гостиницы</h2>
+        <!--здесь форма-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="search-form1">
+            <p class="calendar">
+              <label for="date-of-arrival">Дата заезда:</label>
+              <input id="date-of-arrival" type="text" name="date-of-arrival" value="" placeholder="14 сентября 2019" required>
+              <a href="" aria-label="выбрать на календаре дату заезда">
+                <img src="img/index/calendar.svg" alt="календарь для выбора даты">
+              </a>
+            </p>
+            <p class="calendar2">
+              <label for="departure-date">дата выезда:</label>
+              <input id="departure-date" type="text" name="departure-date" value="" placeholder="15 сентября 2019" required>
+              <a href="" aria-label="выбрать на календаре дату выезда">
+                <img src="img/index/calendar.svg" alt="календарь для выбора даты">
+              </a>
+            </p>
+          </div>
+          <div class="search-form2">
+            <div class="number-of-adults"><label for="adults">Взрослые:</label>
+              <a class="minus" href="" aria-label="уменьшить число гостей на одного взрослого">—</a>
+              <input id="adults" type="text" name="adults" value="" placeholder="2" required>
+              <a class="plus" href="" aria-label="увеличить число гостей на одного взрослого">+</a>
+            </div>
+            <label for="kids">Дети:</label>
+            <div class="number-of-kids">
+               <a class="minus" href="" aria-label="уменьшить число гостей на одного взрослого">—</a>
+               <input id="kids" type="text" name="kids" value="" placeholder="0">
+               <a class="plus" href="" aria-label="увеличить число гостей на одного ребенка">+</a>
+            </div>
+          </div>
+          <button class="btn-search-hotel-find" type="submit">Найти</button>
+        </form>
+      </section>
+      </body>
+</html>

@@ -10,17 +10,17 @@
 
   <div class="shadow-unit">
     <header class="main-header">
-        <nav>
-          <a class="header-logo" href="index.html">
+        <nav class="navigation">
+          <a class="header-logo" href="index.html" aria-label="Логотип города Седона">
                   <img src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
-          </a>
-          <ul class="header-menu">
-            <li><a href="">Информация</a></li>
-            <li><a href="">Фото и видео</a></li>
-            <li><a href="">Карта штата</a></li>
-            <li><a href="catalog.html">Гостиницы</a></li>
-          </ul>
-        </nav>
+                </a>
+                <ul class="header-menu">
+                  <li><a href="" aria-label="Информация">Информация</a></li>
+                  <li><a href="" aria-label="Фото и видео">Фото и видео</a></li>
+                  <li><a href="" aria-label="Карта штата">Карта штата</a></li>
+                  <li><a href="catalog.html" aria-label="Гостиницы">Гостиницы</a></li>
+                </ul>
+              </nav>
     </header>
     <main>
       <h1 class="hidden">Каталог гостиниц города Седона
@@ -28,7 +28,7 @@
       <section class="filter">
         <h2>Выбираем нужный вариант.</h2>
         <!--формa -->
-        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post"">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
@@ -81,10 +81,10 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="range-minimum-value"></div>
+              <div class="range-maximum-value"></div>
             </div>
-            <button type="submit" class="filter-button button">Показать</button>
+            <button type="submit" class="filter-button">Показать</button>
           </fieldset>
 
         </form>
@@ -95,14 +95,24 @@
             <p>Найдено: 3</p>
             <p>Сортировка:</p>
             <ul class="sort-characteristic">
-              <li class="sort-blue"><a href="">По цене</a></li>
-              <li><a href="">По типу</a></li>
-              <li><a href="">По рейтингу</a></li>
+              <li class="sort-blue"><a href="" aria-label="По цене">По цене</a></li>
+              <li><a href="" aria-label="По типу">По типу</a></li>
+              <li><a href="" aria-label="По рейтингу">По рейтингу</a></li>
             </ul>
           </div>
           <div>
-            <button type="button"></button>
-            <button type="button"></button>
+            <ul class="sort-much-smaller">
+            <li>
+              <a href="" class="much" aria-label="от большего к меньшему">
+                <img src="img/catalog/icon-up-dir.svg" alt="от большего к меньшему ">
+              </a>
+            </li>
+            <li>
+              <a class="smaller" aria-label="от меньшего к большему">
+                <img src="img/catalog/icon-down-dir.svg" alt="от меньшего к большему">
+              </a>
+            </li>
+          </ul>
           </div>
       </section>
       <section>
@@ -111,31 +121,39 @@
           <li class="hotel-option">
             <div class="hotel-option-amara">
               <div>
-                <a href="">
+                <a href="" aria-label="гостинница amara">
                   <img src="img/catalog/catalog1.jpg" width="135" height="90" alt="гостинница amara">
                 </a>
               </div>
             </div>
             <div>
               <div>
-                <a href="">Amara Resort &amp; Spa</a>
+                <a href="" aria-label="Amara Resort &amp; Spa">Amara Resort &amp; Spa</a>
               </div>
               <div class="numbers">
                   <p class="hotel">гостиница</p>
-                  <a class="button-more" href="#">подробнее</a>
+                  <a class="button-more" href="#" aria-label="подробнее">подробнее</a>
               </div>
               <div class="booking">
                   <p class="price">от 4000 р.</p>
-                  <a class="button-book" href="#">забронировать</a>
+                  <a class="button-book" href="#" aria-label="забронировать">забронировать</a>
               </div>
             </div>
             <div>
               <div >
                 <p class="hidden">4 звездoчки</p>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
                 <p>рейтинг: 8,5</p>
               </div>
             </div>
@@ -143,58 +161,68 @@
           <li class="hotel-option">
             <div class="hotel-option-desert">
               <div>
-                <a href="">
+                <a href="" aria-label="гостинница desert">
                   <img src="img/catalog/catalog2.jpg" width="135" height="90" alt="гостинница desert">
                 </a>
               </div>
               <div>
                <div>
-                <a href="">Desert Quail Inn</a>
+                <a href="" aria-label="Desert Quail Inn">Desert Quail Inn</a>
                </div>
                <div class="numbers">
                   <p class="hotel">гостиница</p>
-                  <a class="button-more" href="#">подробнее</a>
+                  <a class="button-more" href="#" aria-label="подробнее">подробнее</a>
                </div>
                <div class="booking">
                   <p class="price">От 3000 Р.</p>
-                  <a class="button-book" href="#">забронировать</a>
+                  <a class="button-book" href="#" aria-label="забронировать">забронировать</a>
                </div>
               </div>
             </div>
             <div>
               <div >
                 <p class="hidden">3 звездoчки</p>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
                 <p>Рейтинг: 8,9</p>
               </div>
             </div>
           </li>
           <li class="hotel-option">
             <div class="hotel-option-villas">
-                  <a href="">
+                  <a href="" aria-label="гостинница villas">
                     <img src="img/catalog/catalog3.jpg" width="135" height="90" alt="гостинница villas">
                   </a>
             </div>
               <div>
               <div>
-                <a href="">Villas at Poco Diablo</a>
+                <a href="" aria-label="Villas at Poco Diablo">Villas at Poco Diablo</a>
               </div>
               <div class="numbers">
                   <p class="hotel">гостиница</p>
-                  <a class="button-more" href="#">подробнее</a>
+                  <a class="button-more" href="#" aria-label="подробнее">подробнее</a>
               </div>
               <div class="booking">
                   <p class="price">от 4000 р.</p>
-                  <a class="button-book" href="#">забронировать</a>
+                  <a class="button-book" href="#" aria-label="забронировать">забронировать</a>
               </div>
             </div>
             <div>
               <div>
                 <p class="hidden">2 звездoчки</p>
-                <span></span>
-                <span></span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
+                <span>
+                  <img src="img/catalog/zvezda.svg" alt="звезда">
+                </span>
                 <p>Рейтинг: 9,2</p>
               </div>
             </div>
@@ -225,7 +253,7 @@
         </ul>
         <div>
           <p>Website by
-          <a href="https://htmlacademy.ru/">
+          <a href="https://htmlacademy.ru/"  aria-label="htmlacademy">
             <img src="img/academy.svg" width="115" height="41" alt="логотип htmlacademy">
           </a>
         </p>
