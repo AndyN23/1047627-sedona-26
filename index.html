@@ -11,22 +11,25 @@
   <div class="shadow-unit">
 
     <header class="main-header">
-        <nav>
-          <a class="header-logo" href="index.html">
+        <nav class="navigation">
+          <a class="header-logo" href="index.html" aria-label="Логотип города Седона">
                   <img src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
                 </a>
                 <ul class="header-menu">
-                  <li><a href="">Информация</a></li>
-                  <li><a href="">Фото и видео</a></li>
-                  <li><a href="">Карта штата</a></li>
-                  <li><a href="catalog.html">Гостиницы</a></li>
+                  <li><a href="" aria-label="Информация">Информация</a></li>
+                  <li><a href="" aria-label="Фото и видео">Фото и видео</a></li>
+                  <li><a href="" aria-label="Карта штата">Карта штата</a></li>
+                  <li><a href="catalog.html" aria-label="Гостиницы">Гостиницы</a></li>
                 </ul>
               </nav>
     </header>
     <main>
+      <h1 class="hidden">Город Седона</h1>
       <section class="mountain">
         <h2 class="hidden">Гора Седона</h2>
-        <img src="img/index/index1.png" alt="Логотип города Седона" width="459" height="353">
+        <img class="welcome-block-bottom" src="img/index/polygon.png" width="1200" height="57" alt="Гора Седона">
+        <img src="img/index/index1.png" alt="Welcome to gorgeous sedona" width="459" height="353">
+        <img src="img/index/polygon.png" width="1201" height="59" alt="polygon">
       </section>
       <section class="city">
         <div>
@@ -35,36 +38,36 @@
            </h2>
            <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-            <section>
-              <div>
+            <section class="description-sedona1">
+              <div class="description-sedona1-text">
                 <h2>Настоящий городок</h2>
                 <p>— №1 —</p>
                 <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <div>
+              <div class="description-sedona1-photo">
                 <img src="img/index/index2.jpg" width="800" height="401" alt="Частичка города.">
               </div>
             </section>
-            <section>
-              <ul>
-                <li>
-                  <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="логотип дом">
+            <section class="description-sedona2">
+              <ul class="features-list">
+                <li class="scope">
+                  <img src="img/index/icon-1.svg" width="75" height="72" alt="логотип дом">
                   <h3>Жильё</h3>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li>
-                  <img src="https://via.placeholder.com/74x70" width="74" height="70" alt="логотип еда">
+                <li class="scope">
+                  <img src="img/index/icon-2.svg" width="74" height="70" alt="логотип еда">
                   <h3>Еда</h3>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li>
-                  <img src="https://via.placeholder.com/64x76" width="64" height="76" alt="логотип сувениры">
+                <li class="scope">
+                  <img src="img/index/icon-3.svg" width="64" height="76" alt="логотип сувениры">
                   <h3>Сувениры</h3>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
             </section>
-            <section>
+            <section class="description-sedona3">
               <div>
                 <img src="img/index/index3.jpg" width="800" height="400" alt="Мост дьявола.">
               </div>
@@ -74,19 +77,19 @@
                 <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
               </div>
             </section>
-            <section>
-              <ul>
-                <li>
+            <section class="description-sedona4">
+              <ul class="advantage">
+                <li class="pluses">
                   <h3>Небольшая площадь</h3>
                   <p>— №3 —</p>
                   <p>Все достопримечательности находятся очень близко</p>
                 </li>
-                <li>
+                <li class="pluses">
                   <h3>Красивая дорога</h3>
                   <p>— №4 —</p>
                   <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                 </li>
-                <li>
+                <li class="pluses">
                   <h3>Мало туристов</h3>
                   <p>— №5 —</p>
                   <p>Большинство едет в гранд каньон и толпится там</p>
@@ -99,15 +102,11 @@
         <p>Укажите предполагаемые даты поездки, <br>
          и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-        <button type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
       </section>
-      <section>
-        <h2 class="hidden">Форма поиска гостиницы</h2>
-        <!-- здесь будет форма -->
-      </section>
-      <section>
+      <section class="map">
         <h2>Седона на карте</h2>
-        <img src="img/index/map.jpg" width="1200" height="594" alt="Карта города Седона.">
+        <iframe src="https://goo.gl/maps/yL8VJzecggsuCEBU8" width="1200" height="593" style="border:0" allowfullscreen=""></iframe>
       </section>
     </main>
     <footer class="main-footer">
@@ -127,16 +126,16 @@
           </li>
           <li>
             <a class="social-button youtube" href="" aria-label="youtube">
-            <img src="img/youtube.svg" width="46" height="48" alt="ютуб">
+            <img src="img/youtube.svg" width="46" height="48" alt="youtube">
             </a>
           </li>
         </ul>
         <div>
           <p>Website by
-          <a href="https://htmlacademy.ru/">
-            <img src="img/academy.svg" width="115" height="41" alt="логотип htmlacademy">
-          </a>
-        </p>
+            <a href="https://htmlacademy.ru/"  aria-label="htmlacademy">
+              <img src="img/academy.svg" width="115" height="41" alt="логотип htmlacademy">
+            </a>
+          </p>
         </div>
       </div>
     </footer>
