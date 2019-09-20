@@ -29,8 +29,8 @@
         <h2>Выбираем нужный вариант.</h2>
         <!--формa -->
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
+          <fieldset class="checkbox-filter">
+            <legend class="filter-form-legend">Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
                 <label>
@@ -49,8 +49,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Тип жилья:</legend>
+          <fieldset class="checkbox-filter">
+            <legend  class="filter-form-legend">Тип жилья:</legend>
             <ul>
               <li class="filter-option">
                 <label>
@@ -71,7 +71,7 @@
           </fieldset>
 
           <fieldset class="range">
-            <legend>Стоимость в сутки (р):</legend>
+            <legend class="filter-form-legend">Стоимость в сутки (р):</legend>
 
             <div class="price-controls">
               <label class="minimum-value">от <input type="text" name="minimum-value" value="0"></label>
@@ -84,7 +84,7 @@
               <div class="range-minimum-value"></div>
               <div class="range-maximum-value"></div>
             </div>
-            <button type="submit" class="filter-button">Показать</button>
+            <button class="button button-form" type="submit">Показать</button>
           </fieldset>
 
         </form>
@@ -92,15 +92,15 @@
       <section class="sort">
         <h2>Отбираем по цене, типу или рейтингу.</h2>
          <div>
-            <p>Найдено: 3</p>
-            <p>Сортировка:</p>
+            <p class="found">Найдено: 3</p>
+            <p class="sort-list">Сортировка:</p>
             <ul class="sort-characteristic">
-              <li class="sort-blue"><a href="" aria-label="По цене">По цене</a></li>
-              <li><a href="">По типу</a></li>
-              <li><a href="">По рейтингу</a></li>
+              <li><a class="sort-characteristic1" href="">По цене</a></li>
+              <li><a class="sort-characteristic2" href="">По типу</a></li>
+              <li><a class="sort-characteristic3" href="">По рейтингу</a></li>
             </ul>
           </div>
-          <div>
+          <div class="triageunit">
             <ul class="sort-much-smaller">
             <li>
               <a href="" class="much" aria-label="от большего к меньшему">
