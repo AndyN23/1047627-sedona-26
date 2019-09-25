@@ -1,0 +1,497 @@
+/*общие стили*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 21px;
+    background-color: #f2f2f2;
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font: inherit;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    border: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.button-choice{
+    background-color: #766357;
+}
+
+.button-choice:hover {
+    background-color: #604e43;
+}
+
+.button-choice:active {
+    background-color: #503e33;
+    color: #7e7169;
+}
+
+.button-more{
+    background-color: #81b3d2;
+}
+
+.button-more:hover {
+    background-color: #669ec0;
+}
+
+.button-more:active {
+    background-color: #5496bd;
+    color: #86b5d0;
+}
+
+
+/*общие стили теневого блока*/
+.shadow-unit {
+    width: 1200px;
+    /*height: 2762px;*/
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
+}
+
+
+/* общие стили для шапки*/
+
+.navigation {
+    line-height: 26px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.navigation li {
+    box-sizing: border-box;
+    width: 240px;
+    list-style: none;
+}
+
+.navigation a:link {
+    color: #000000;
+}
+
+.navigation a:hover {
+    color: #89b8d5;
+}
+
+.navigation a:active {
+    color: #b2b2b2;
+}
+
+/*2 страница 4 ссылка в разделе гостинницы*/
+.navigation .active,
+.navigation .active:hover,
+.navigation .active:active {
+    color: #766357;
+}
+
+/*общие стили для подвала*/
+
+.main-footer {
+    background: #fefefe;
+    color: #000;
+    width: 1200px;
+}
+
+.footer-hashtag {
+    width: 136px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.footer-social li {
+    list-style: none;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+}
+
+.social-button:focus,
+.social-button:hover {
+    background-color: #669ec0;
+}
+
+.social-button:active {
+    background-color: #5496bd;
+}
+
+.social-button:active svg {
+    opacity: 0.3;
+}
+
+
+.footer-copyright {
+    font-size: 14px;
+    line-height: 26px
+}
+
+
+
+.academy-btn svg {
+    width: 115px;
+    height: 41px;
+}
+
+.academy-btn:hover .footer-logo-icon {
+    fill: #81b3d2;
+}
+
+.academy-btn:active .footer-logo-icon {
+    fill: #bdbbbc;
+}
+
+.inscription-logo {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*Страница 1 */
+
+/*основная информация о городе-введение*/
+.main-photo-mountain {
+    width: 1200px;
+    height: 800px;
+    background: url(../img/index/background_photo.jpg) no-repeat;
+}
+.photo-mountain {
+    width: 459px;
+    height: 353px;
+
+}
+.brief-description {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.main-photo-mountain div:nth-child(2) {
+    width: 1200px;
+    height: 59px;
+}
+
+.brief-description {
+}
+/*достопримечательности седона 1*/
+
+.description-sedona1-text {
+    width: 400px;
+    background-color: #81b3d2;
+    text-align: center;
+    /*height: 256px;*/
+}
+.sights-Sedona1-photo {
+    width: 800px;
+    height: 256px;
+}
+
+
+/*достопримечательности седона 2*/
+
+.scope {
+    text-align: center;
+    list-style: none;
+}
+
+
+/*достопримечательности седона 3*/
+
+.description-sedona2-text {
+    width: 400px;
+    background-color: #81b3d2;
+    text-align: center;
+    /*height: 256px;*/
+}
+.sights-Sedona3-photo {
+    width: 800px;
+    height: 256px;
+}
+
+/*достопримечательности седона 4*/
+
+.pluses {
+    text-align: center;
+    list-style: none;
+}
+
+/*блок поиска отеля*/
+
+.search-hotels {
+    background-color: #ffffff;
+    width: 1200px;
+    text-align: center;
+}
+
+.search-hotels h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.search-hotels p {
+    line-height: 24px;
+}
+
+.search-hotels button {
+    width: 568px;
+    height: 86px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+
+
+/*вторая страничка*/
+
+/*секция фильтры*/
+
+.filter {
+    width: 1200px;
+    height: 800px;
+    background-image: url(../img/catalog/filter.jpg);
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.filter li {
+    list-style: none;
+}
+
+.filter-form fieldset {
+    border: none;
+}
+.button-form {
+    width: 133px;
+    height: 32px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.button-form:hover {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000000;
+}
+
+.filter-form-legend {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*блок сортировка*/
+
+.found {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.sort li {
+    list-style: none;
+
+}
+
+.sort-characteristic li,
+.sort-list {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sort-characteristic1 {
+    color: #81b3d2;
+}
+
+.sort-characteristic2,
+.sort-characteristic3{
+    color: #000000;
+    opacity: 0.3;
+}
+
+.sort-characteristic2:hover,
+.sort-characteristic3:hover {
+    color: #81b3d2;
+    opacity: 1;
+}
+
+.sort-characteristic2:active,
+.sort-characteristic3:active {
+    opacity:1;
+    color: #000000;
+}
+
+.price-controls input[type="text"] {
+    font: inherit;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+.filter-option input {
+    color: transperent;
+    border-color: #ffffff;
+}
+/*список гостинниц*/
+
+.list-hotels {
+    width: 1200px;
+    background-color: #ffffff;
+}
+
+.hotel-option {
+    padding-left: 72px;
+    border-bottom: 1px solid #e5e5e5;
+    align-items: center;
+    list-style: none;
+}
+
+.name-hotel a {
+    color: #000000;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+/*потаты сейчас скрываем*/
+.search-form-sedona {
+  display: none;
+}
+
+/*сеточные стили*/
+html,
+body {
+  min-width: 1280px;
+  min-height: 933px;
+}
+
+body {
+  /* Временно для сетки */
+  background-image: url(../img/preview/sedona-index.jpg);
+  background-size: 1280px auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.navigation {
+    display: block;
+    position: relative;
+    min-height: 56px;
+    min-width: 1200px;
+    outline: 1px solid #1a4780;
+}
+
+.header-logo {
+    position: absolute;
+    left: 50%;
+    width: 138px;
+    height: 70px;
+    margin-left: 2px;
+    outline: 1px solid green;
+}
+
+
+.header-menu {
+    display: flex;
+    justify-content: row;
+    outline: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+    min-width: 1200px;
+    min-height: 56px;
+}
+
+.header-menu li {
+    outline: 1px solid green;
+    padding: 22px 72px;
+}
+шАПКА
+html,
+body {
+  min-width: 1280px;
+  min-height: 933px;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+
+body {
+  /* Временно для сетки */
+  background-image: url(../img/preview/sedona-index.jpg);
+  background-size: 1280px auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.navigation {
+    display: block;
+    position: relative;
+    min-height: 56px;
+    min-width: 1200px;
+    outline: 1px solid #1a4780;
+}
+
+.header-logo {
+    position: absolute;
+    left: 530px;
+    width: 138px;
+    height: 70px;
+    margin-left: 0px;
+    outline: 1px solid green;
+}
+
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+    min-width: 1200px;
+    min-height: 56px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-menu li {
+    outline: 1px solid green;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.header-menu li:last-of-type,
+.header-menu li:nth-of-type(3) {
+    text-align: right;
+}
