@@ -3,7 +3,9 @@ html,
 body {
   min-width: 1280px;
 }
-
+/** {
+  outline: 1px solid red;
+}*/
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
@@ -86,7 +88,6 @@ a {
     font-weight: 700;
     padding: 0 72px;
     display: block;
-    position: relative;
 }
 
 .header-logo {
@@ -162,7 +163,7 @@ a {
     font-weight: 700;
     line-height: 26px;
     padding: 0;
-    margin: ;
+    margin: 0;
 
 }
 
@@ -248,29 +249,29 @@ a {
     align-items: center;
     justify-content: center;
     min-height: 508px;
-    background: url(../img/index/background_photo.jpg) 0% 28.5% no-repeat;
+    background-image: url(../img/index/polygon.png),url(../img/index/background_photo.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 100.2%, 0 29%;
 }
 
 .photo-mountain {
     width: 459px;
     height: 353px;
     background-position: center;
-    margin-top: 6.5%;
-}
-
-.polygon {
-    margin-top: 1.8%;
 }
 
 .brief-description {
     background-color: #ffffff;
     text-align: center;
     width: 1200px;
-    padding-top: 3.6%;
+    margin-top: 5%;
+    line-height: 26px;
 }
 
-.brief-description p {
-    padding-top: 1.6%;
+.brief-description h2 {
+    font-size: 21px;
+    font-weight: 700;
+    padding-bottom: 0.9%;
 }
 
 .main-photo-mountain div:nth-child(2) {
@@ -282,12 +283,33 @@ a {
 }
 /*достопримечательности седона 1*/
 
-.description-sedona1-text {
-    width: 400px;
+.sights-Sedona1 {
+    display: flex;
     background-color: #81b3d2;
+    color: #fff;
+    padding: 0;
+    margin: 53px 0 0;
+}
+
+.description-sedona1-text {
     text-align: center;
+    flex-grow: 1;
+    padding: 0px;
     /*height: 256px;*/
 }
+
+.description-sedona1-text p {
+    margin: 0;
+}
+.description-sedona1-text h2 {
+    margin: 0;
+    padding: 45px 0 20px;
+}
+ .description-sedona1-text p:last-of-type {
+    margin: 0;
+    padding-top: 21px;
+}
+
 .sights-Sedona1-photo {
     width: 800px;
     height: 256px;
@@ -296,29 +318,134 @@ a {
 
 /*достопримечательности седона 2*/
 
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 4.4% 5.4% 5.8% 6.2%;
+}
+
+.home,
+.eat {
+    margin-left: 7%;
+}
+
 .scope {
     text-align: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scope-home {
+    margin-top: 40.8%;
+}
+.scope-eat {
+    margin-top: 36.3%;
+}
+.scope-souvenirs {
+    margin-top: 38%;
+}
+
+.features-list h3 {
+   font-size: 21px;
+    line-height: 26px;
+    padding-top: 0%;
+}
+
+.home {
+    background-image: url(../img/index/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position: 49% 3%;
+}
+.eat {
+    background-image: url(../img/index/icon-2.svg);
+    background-repeat: no-repeat;
+    background-position: 52% 4%;
+}
+
+.souvenirs {
+    background-image: url(../img/index/icon-3.svg);
+    background-repeat: no-repeat;
+    background-position: 49% 0;
 }
 
 
 /*достопримечательности седона 3*/
 
-.description-sedona2-text {
-    width: 400px;
+.sights-Sedona3 {
+    display: flex;
     background-color: #81b3d2;
-    text-align: center;
+    color: #fff;
+    padding: 0;
+    margin: 53px 0 0;
 }
+
+.description-sedona3-text {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0px;
+    /*height: 256px;*/
+}
+
+.description-sedona3-text p {
+    margin: 0;
+}
+
+.description-sedona3-text h2 {
+    margin: 0;
+    padding: 45.3px 0 20px;
+}
+
+ .description-sedona3-text p:last-of-type {
+    margin: 0;
+    padding-top: 21px;
+}
+
 .sights-Sedona3-photo {
     width: 800px;
     height: 256px;
 }
-
 /*достопримечательности седона 4*/
+
+.advantage {
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 0;
+    margin: 3.8% 0% 7.3% 7.9%;
+}
+
+.advantage li:nth-child(2) {
+    margin-left: 15.1%;
+}
+
+.advantage li:nth-child(3) {
+    margin-left: 13.4%;
+}
 
 .pluses {
     text-align: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pluses h3 {
+    font-size: 21px;
+    margin:  0 0 9% 0;
+}
+
+.pluses .pluses1 {
+    margin:  0 0 11% 0;
+}
+
+.pluses p {
+    margin:  0 0 8% 0;
+}
+
+.pluses .pluses2 {
+    margin: 10% 0 0 0;
 }
 
 /*блок поиска отеля*/
@@ -346,6 +473,7 @@ a {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    margin: auto;
 }
 
 
@@ -431,7 +559,7 @@ a {
 .price-controls input[type="text"] {
     font: inherit;
     color: #ffffff;
-    background-color: transparent;
+    background-color: transperent;
     border: 2px solid #ffffff;
 }
 
