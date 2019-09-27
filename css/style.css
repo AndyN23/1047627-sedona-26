@@ -1,5 +1,13 @@
 /*общие стили*/
-
+html,
+body {
+  min-width: 1280px;
+}
+/** {
+  outline: 1px solid red;
+}*/
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 body {
     margin: 0;
@@ -10,12 +18,15 @@ body {
     font-size: 14px;
     font-weight: normal;
     line-height: 21px;
-
     background-color: #f2f2f2;
+
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
+    font-family: inherit;
 }
 
 .button {
@@ -61,11 +72,10 @@ a {
 /*общие стили теневого блока*/
 .shadow-unit {
     width: 1200px;
-    /*height: 2762px;*/
     background-color: #fff;
     margin-right: auto;
     margin-left: auto;
-    box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2)
+    box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
 
 
@@ -75,16 +85,21 @@ a {
     line-height: 26px;
     text-decoration: none;
     color: #000000;
-    font-weight: bold;
+    font-weight: 700;
+    padding: 0 72px;
+    display: block;
 }
 
-.navigation li {
-    box-sizing: border-box;
-    width: 240px;
-    list-style: none;
+.header-logo {
+    position: absolute;
+    left: 50%;
+    width: 138px;
+    height: 70px;
+    margin-left: 0px;
+    transform: translateX(-50%);
 }
 
-.navigation a:link {
+.navigation a {
     color: #000000;
 }
 
@@ -103,24 +118,72 @@ a {
     color: #766357;
 }
 
+.header-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu li {
+    width: 23%;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    list-style: none;
+}
+
+.header-menu li:nth-last-of-type(2),
+.header-menu li:last-of-type {
+    text-align: right;
+}
+
+.header-menu li:nth-last-of-type(3) {
+    margin-right: auto;
+}
+
 /*общие стили для подвала*/
+
 
 .main-footer {
     background: #fefefe;
     color: #000;
-    width: 1200px;
+    min-width: 1200px;
+    min-height: 120px;
+    padding: 0 8.5% 0 11%;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-footer-hashtag {
+.footer-hashtag {
     width: 136px;
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    padding: 0;
+    margin: 0;
+
 }
 
+.footer-social ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
 .footer-social li {
+    margin-left: 6px;
     list-style: none;
 }
+
+.footer-social li:first-child{
+    margin-left: 25px
+}
+
 
 .social-button {
     display: flex;
@@ -150,11 +213,12 @@ footer-hashtag {
     line-height: 26px
 }
 
-
-
 .academy-btn svg {
     width: 115px;
     height: 41px;
+    padding-left: 0%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .academy-btn:hover .footer-logo-icon {
@@ -167,6 +231,7 @@ footer-hashtag {
 
 .inscription-logo {
     text-align: center;
+    line-height: 26px;
 }
 
 
@@ -178,34 +243,73 @@ footer-hashtag {
 /*Страница 1 */
 
 /*основная информация о городе-введение*/
+.main-photo-mountain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 508px;
+    background-image: url(../img/index/polygon.png),url(../img/index/background_photo.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 100.2%, 0 29%;
+}
 
-.basic-information-Sedona {
-    width: 1200px;
-    height: 800px;
-    z-index: 1;
-    background-image: url(../img/index/background_photo.jpg);
+.photo-mountain {
+    width: 459px;
+    height: 353px;
+    background-position: center;
 }
 
 .brief-description {
-    width: 1200px;
     background-color: #ffffff;
-    z-index: 2;
     text-align: center;
+    width: 1200px;
+    margin-top: 5%;
+    line-height: 26px;
+}
+
+.brief-description h2 {
+    font-size: 21px;
+    font-weight: 700;
+    padding-bottom: 0.9%;
 }
 
 .main-photo-mountain div:nth-child(2) {
+    width: 1200px;
+    height: 59px;
 }
 
 .brief-description {
 }
 /*достопримечательности седона 1*/
 
-.description-sedona1-text {
-    width: 400px;
+.sights-Sedona1 {
+    display: flex;
     background-color: #81b3d2;
+    color: #fff;
+    padding: 0;
+    margin: 53px 0 0;
+}
+
+.description-sedona1-text {
     text-align: center;
+    flex-grow: 1;
+    padding: 0px;
     /*height: 256px;*/
 }
+
+.description-sedona1-text p {
+    margin: 0;
+}
+.description-sedona1-text h2 {
+    margin: 0;
+    padding: 45px 0 20px;
+}
+ .description-sedona1-text p:last-of-type {
+    margin: 0;
+    padding-top: 21px;
+}
+
 .sights-Sedona1-photo {
     width: 800px;
     height: 256px;
@@ -214,30 +318,134 @@ footer-hashtag {
 
 /*достопримечательности седона 2*/
 
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 4.4% 5.4% 5.8% 6.2%;
+}
+
+.home,
+.eat {
+    margin-left: 7%;
+}
+
 .scope {
     text-align: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scope-home {
+    margin-top: 40.8%;
+}
+.scope-eat {
+    margin-top: 36.3%;
+}
+.scope-souvenirs {
+    margin-top: 38%;
+}
+
+.features-list h3 {
+   font-size: 21px;
+    line-height: 26px;
+    padding-top: 0%;
+}
+
+.home {
+    background-image: url(../img/index/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position: 49% 3%;
+}
+.eat {
+    background-image: url(../img/index/icon-2.svg);
+    background-repeat: no-repeat;
+    background-position: 52% 4%;
+}
+
+.souvenirs {
+    background-image: url(../img/index/icon-3.svg);
+    background-repeat: no-repeat;
+    background-position: 49% 0;
 }
 
 
 /*достопримечательности седона 3*/
 
-.description-sedona2-text {
-    width: 400px;
+.sights-Sedona3 {
+    display: flex;
     background-color: #81b3d2;
+    color: #fff;
+    padding: 0;
+    margin: 53px 0 0;
+}
+
+.description-sedona3-text {
     text-align: center;
+    flex-grow: 1;
+    padding: 0px;
     /*height: 256px;*/
 }
+
+.description-sedona3-text p {
+    margin: 0;
+}
+
+.description-sedona3-text h2 {
+    margin: 0;
+    padding: 45.3px 0 20px;
+}
+
+ .description-sedona3-text p:last-of-type {
+    margin: 0;
+    padding-top: 21px;
+}
+
 .sights-Sedona3-photo {
     width: 800px;
     height: 256px;
 }
-
 /*достопримечательности седона 4*/
+
+.advantage {
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 0;
+    margin: 3.8% 0% 7.3% 7.9%;
+}
+
+.advantage li:nth-child(2) {
+    margin-left: 15.1%;
+}
+
+.advantage li:nth-child(3) {
+    margin-left: 13.4%;
+}
 
 .pluses {
     text-align: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pluses h3 {
+    font-size: 21px;
+    margin:  0 0 9% 0;
+}
+
+.pluses .pluses1 {
+    margin:  0 0 11% 0;
+}
+
+.pluses p {
+    margin:  0 0 8% 0;
+}
+
+.pluses .pluses2 {
+    margin: 10% 0 0 0;
 }
 
 /*блок поиска отеля*/
@@ -256,6 +464,7 @@ footer-hashtag {
 
 .search-hotels p {
     line-height: 24px;
+    padding-bottom: 2.8%;
 }
 
 .search-hotels button {
@@ -264,28 +473,33 @@ footer-hashtag {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    margin: auto;
 }
 
-
+/*карта*/
+.map {
+    background-image: url(../img/index/map.jpg) no-repeat;
+}
 
 /*вторая страничка*/
 
 /*секция фильтры*/
 
 .filter {
-    width: 1200px;
-    height: 800px;
     background-image: url(../img/catalog/filter.jpg);
     background-repeat: no-repeat;
     color: #ffffff;
+    background-size: cover;
+    padding: 0;
+    margin: 0px 0 11px;
 }
 
-.filter li {
-    list-style: none;
-}
 
 .filter-form fieldset {
     border: none;
+    margin-top: 28px;
+    padding: 0;
+    border: 0;
 }
 .button-form {
     width: 133px;
@@ -304,9 +518,26 @@ footer-hashtag {
 .filter-form-legend {
     font-size: 16px;
     font-weight: 700;
+
 }
 
-/*блок сортировка*/
+.filter-form {
+    display: flex;
+    padding-bottom: 2.5%;
+    width: 1056px;
+    margin-left: 6%;
+}
+.checkbox-filter ul {
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.filter-option {
+    margin-top: 24px;
+}
+
+
 
 .found {
     font-size: 21px;
@@ -350,7 +581,7 @@ footer-hashtag {
 .price-controls input[type="text"] {
     font: inherit;
     color: #ffffff;
-    background-color: transparent;
+    background-color: transperent;
     border: 2px solid #ffffff;
 }
 
@@ -363,13 +594,29 @@ footer-hashtag {
 .list-hotels {
     width: 1200px;
     background-color: #ffffff;
+
+}
+
+.hotel {
+    margin:0;
+    padding: 0
+}
+.hotel-option:first-child {
+    border-top: 1px solid #e5e5e5;
 }
 
 .hotel-option {
-    padding-left: 72px;
+    padding: 0 72px 0 45px;
     border-bottom: 1px solid #e5e5e5;
     align-items: center;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.hotel-option-image {
+    padding: 30px 25px 25px 30px;
 }
 
 .name-hotel a {
@@ -379,7 +626,74 @@ footer-hashtag {
     line-height: 26px;
 }
 
-/*потаты сейчас скрываем*/
-.search-form-sedona {
-  display: none;
+.name-hotel {
+    padding-bottom: 5px;
+    padding-left: 2px;
 }
+
+.name-hotel-item-more {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-hotel-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.numbers .button-more {
+    width: 110px;
+    height: 27px;
+}
+
+.booking .button-choice {
+    width: 142px;
+    height: 27px;
+}
+
+.button-more,
+.button-choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers,
+.booking {
+padding: 1%;
+}
+
+.hotel-option-rating {
+    margin-left: auto;
+}
+
+.rating {
+    padding: 0 2px 43px 0;
+    text-align: right;
+}
+
+.hotel-option-rating p{
+    color: #666666;
+    background-color: #f2f2f2;
+    margin: 0 12px 0 0;
+}
+
+
+.numbers p,
+.booking p {
+    padding-top: 0;
+    margin-top: 0;
+}
+/*потаты сейчас скрываем*/
+
+.search-form-sedona {
+    display: none;
+}
+
+
+
+
+/*сеточные стили*/
+
+
+/*фоновая картинка*/
