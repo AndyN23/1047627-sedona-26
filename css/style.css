@@ -478,7 +478,10 @@ a {
 
 /*карта*/
 .map {
-    background-image: url(../img/index/map.jpg) no-repeat;
+    height: 593px;
+    background-image: url(../img/index/map.jpg);
+    baсkground-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*вторая страничка*/
@@ -538,6 +541,30 @@ a {
 }
 
 
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.range {
+    width: 315px;
+    padding: 0;
+    margin: 0 0 9px auto;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.range legend {
+    font-weight: 700;
+}
+.range-controls {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/*блок сортировка*/
 
 .found {
     font-size: 21px;
@@ -547,35 +574,83 @@ a {
 
 .sort li {
     list-style: none;
-
 }
 
-.sort-characteristic li,
+.sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 8px 72px
+}
+
+.sort1 {
+    display: flex;
+    align-items: center;
+}
+
+.sort-characteristic,
 .sort-list {
     font-size: 12px;
     line-height: 18px;
 }
 
-.sort-characteristic1 {
-    color: #81b3d2;
+.sort-list {
+    margin-left: 50px;
 }
 
-.sort-characteristic2,
-.sort-characteristic3{
+.sort-characteristic {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 39px;
+}
+
+.sort-characteristic a {
+    display: block;
+    margin-right: 30px;
+    vertical-align: middle;
     color: #000000;
     opacity: 0.3;
+    border-bottom: 1px dotted #81b3d2
 }
 
-.sort-characteristic2:hover,
-.sort-characteristic3:hover {
+.sort-characteristic a:focus,
+.sort-characteristic a:hover {
     color: #81b3d2;
     opacity: 1;
+    border-bottom: 1px dotted #81b3d2
 }
 
-.sort-characteristic2:active,
-.sort-characteristic3:active {
-    opacity:1;
+.sort-characteristic a:active {
     color: #000000;
+    opacity: 1;
+    border: 0
+}
+
+.sort-characteristic1 a {
+    display: block;
+    margin-right: 30px;
+    color: #81b3d2;
+    opacity: 1;
+    border: 0
+}
+
+.sort-much-smaller {
+    display: flex;
+    list-style: none;
+    width: 20px;
+
+}
+.triageunit {
+    padding-right: 20px;
+    margin-left:  auto;
+}
+
+.sort-much-smaller li {
+    margin-right: 10px
 }
 
 .price-controls input[type="text"] {
@@ -684,16 +759,132 @@ padding: 1%;
     padding-top: 0;
     margin-top: 0;
 }
-/*потаты сейчас скрываем*/
+/*потаты*/
 
 .search-form-sedona {
-    display: none;
+    line-height: 26px;
+}
+
+.btn-search-hotel-find {
+    font-size: 21px;
 }
 
 
+.search-form-sedona {
+    position: absolute;
+    padding: 0;
+    height: 395px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-form {
+    width: 568px;
+    height: 395px;
+    padding-top: 43px;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+}
+
+.search-form1 {
+    padding: 0;
+    width: 457px;
+    margin: 0 auto;
+}
+
+.search-form1 p {
+    padding: 0;
+    margin: 10px 0 24px;
+}
 
 
-/*сеточные стили*/
+.search-calendar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 460px;
+}
+
+.search-calendar label {
+    margin-right: auto;
+}
+
+.search-calendar input {
+    position: relative;
+    box-sizing: border-box;
+    width: 346px;
+    min-height: 38px;
+    font: inherit;
+    padding: 6px 38px 6px 15px;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+.search-calendar input:hover {
+    background-color: #ebebeb;
+}
+
+.search-calendar input:focus {
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.calendar,
+.calendar:active,
+.calendar:hover {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+}
+
+.calendar:hover {
+    background: url(../img/calendar-hover.svg) no-repeat 50% 50%;
+}
+
+.calendar:active {
+    background: url(../img/calendar-active.svg) no-repeat 50% 50%;
+}
 
 
-/*фоновая картинка*/
+.search-form2 {
+    display: flex;
+    align-items: center;
+    margin: 30px auto 53px
+}
+
+.search-form2 label {
+    margin: 0;
+    padding: 0;
+    font-weight: 700
+}
+
+.search-form2 p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex
+}
+
+.search-form2 button,
+.search-form2 input {
+    margin: 0;
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    font-weight: 700;
+    background-color: #f2f2f2
+}
+
+.search-form .button-more {
+    font-size: 24px;
+    width: 458px;
+    height: 58px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
