@@ -26,7 +26,7 @@
       <h1 class="hidden">Каталог гостиниц города Седона
       </h1>
       <section class="filter">
-        <h2>Выбираем нужный вариант.</h2>
+        <h2 class="hidden">Выбираем нужный вариант.</h2>
         <!--формa -->
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="checkbox-filter">
@@ -34,17 +34,17 @@
             <ul>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="pool" checked>
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="pool" checked>
                 Бассейн</label>
               </li>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="parking">
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="parking">
                 Парковка</label>
               </li>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
                 Wi-Fi</label>
               </li>
             </ul>
@@ -54,17 +54,17 @@
             <ul>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="hotel" checked>
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="hotel" checked>
                 Гостиница</label>
               </li>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
                 Мотель</label>
               </li>
               <li class="filter-option">
                 <label>
-                  <input class="filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
                 Апартаменты</label>
               </li>
             </ul>
@@ -81,8 +81,8 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="range-minimum-value"></div>
-              <div class="range-maximum-value"></div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
             <button class="button button-form" type="submit">Показать</button>
           </fieldset>
@@ -90,7 +90,7 @@
         </form>
       </section>
       <section class="sort">
-        <h2>Отбираем по цене, типу или рейтингу.</h2>
+        <h2 class="hidden">Отбираем по цене, типу или рейтингу.</h2>
          <div>
             <p class="found">Найдено: 3</p>
             <p class="sort-list">Сортировка:</p>

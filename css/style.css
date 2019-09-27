@@ -476,25 +476,30 @@ a {
     margin: auto;
 }
 
-
+/*карта*/
+.map {
+    background-image: url(../img/index/map.jpg) no-repeat;
+}
 
 /*вторая страничка*/
 
 /*секция фильтры*/
 
 .filter {
-    width: 1200px;
     background-image: url(../img/catalog/filter.jpg);
     background-repeat: no-repeat;
     color: #ffffff;
+    background-size: cover;
+    padding: 0;
+    margin: 0px 0 11px;
 }
 
-.filter li {
-    list-style: none;
-}
 
 .filter-form fieldset {
     border: none;
+    margin-top: 28px;
+    padding: 0;
+    border: 0;
 }
 .button-form {
     width: 133px;
@@ -513,9 +518,26 @@ a {
 .filter-form-legend {
     font-size: 16px;
     font-weight: 700;
+
 }
 
-/*блок сортировка*/
+.filter-form {
+    display: flex;
+    padding-bottom: 2.5%;
+    width: 1056px;
+    margin-left: 6%;
+}
+.checkbox-filter ul {
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.filter-option {
+    margin-top: 24px;
+}
+
+
 
 .found {
     font-size: 21px;
