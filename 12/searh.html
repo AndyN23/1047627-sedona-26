@@ -14,31 +14,36 @@
         <h2 class="hidden">Форма поиска гостиницы</h2>
         <!--здесь форма-->
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="search-form1">
-            <p class="search-calendar">
+          <fieldset class="search-form1">
+            <div class="search-calendar">
               <label for="date-of-arrival">Дата заезда:</label>
               <input id="date-of-arrival" type="text" name="date-of-arrival" value="" placeholder="24 Апреля 2017" required>
-              <button class="calendar" type="button" aria-label="выбрать на календаре дату заезда"></button>
-            </p>
-            <p class="search-calendar">
+              <button class="calendar" type="button" aria-label="выбрать на календаре дату заезда">
+                <img src="img/index/calendar.svg" alt="календарь для выбора даты">
+              </button>
+            </div>
+            <div class="search-calendar">
               <label for="departure-date">дата выезда:</label>
               <input id="departure-date" type="text" name="departure-date" value="" placeholder="4 июля 2017" required>
-              <button class="calendar" type="button" aria-label="выбрать на календаре дату выезда"></button>
-            </p>
-          </div>
-          <div class="search-form2">
-            <div class="number-of-adults"><label for="adults">Взрослые:</label>
+              <button class="calendar" type="button" aria-label="выбрать на календаре дату выезда">
+                <img src="img/index/calendar.svg" alt="календарь для выбора даты">
+              </button>
+            </div>
+          </fieldset>
+          <fielset class="search-form2">
+            <div class="number-of-adults">
+              <label for="adults">Взрослые:</label>
               <button class="minus"  type="button" aria-label="уменьшить число гостей на одного взрослого">—</button>
               <input id="adults" type="text" name="adults" value="" placeholder="2" required>
               <button class="plus"  type="button" aria-label="увеличить число гостей на одного взрослого">+</button>
             </div>
-            <label for="kids">Дети:</label>
             <div class="number-of-kids">
-               <button class="minus"  type="button" aria-label="уменьшить число гостей на одного взрослого">—</button>
-               <input id="kids" type="text" name="kids" value="" placeholder="0">
-               <button class="plus" type="button" aria-label="увеличить число гостей на одного ребенка">+</button>
+              <label for="kids">Дети:</label>
+              <button class="minus"  type="button" aria-label="уменьшить число гостей на одного взрослого">—</button>
+              <input id="kids" type="text" name="kids" value="" placeholder="0">
+              <button class="plus" type="button" aria-label="увеличить число гостей на одного ребенка">+</button>
             </div>
-          </div>
+          </fielset>
           <button class="button button-more" type="submit">Найти</button>
         </form>
       </section>
