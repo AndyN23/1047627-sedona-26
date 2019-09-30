@@ -3,9 +3,9 @@ html,
 body {
     min-width: 1200px;
 }
-/** {
+* {
   outline: 1px solid red;
-}*/
+}
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
@@ -71,6 +71,9 @@ a {
     padding: 0 6% 0 5.8%;
 }
 
+.flex-row {
+    display: flex;
+}
 /*общие стили теневого блока*/
 .shadow-unit {
     width: 1200px;
@@ -151,9 +154,12 @@ a {
     color: #000000;
     min-width: 1200px;
     min-height: 120px;
-    padding: 0 8.5% 0 11%;
+    padding: 2% 2.9% 0 5.9%;
     margin: 0;
     position: relative;
+}
+
+.flex-row-between-center {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -217,7 +223,6 @@ a {
 .academy-btn svg {
     width: 115px;
     height: 41px;
-    padding-left: 0%;
     display: inline-block;
     vertical-align: middle;
 }
@@ -235,6 +240,10 @@ a {
     line-height: 26px;
 }
 
+.academy-btn {
+    padding-left: 5px;
+}
+
 /*Страница 1 */
 
 /*основная информация о городе-введение*/
@@ -247,7 +256,7 @@ a {
     min-height: 508px;
     background-image: url(../img/index/polygon.png),url(../img/index/background_photo.jpg);
     background-repeat: no-repeat;
-    background-position: 0 100.2%, 0 29%;
+    background-position: 0 100.1%, 0 29%;
 }
 
 .photo-mountain {
@@ -402,17 +411,17 @@ a {
 
 .advantage {
     display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 4% 0% 3% 7.9%;
+    justify-content: flex-end;
+    margin: 0 0.3% 0 0;
+    padding: 4.5% 0% 3% 0%;
 }
 
 .advantage li:nth-child(2) {
-    margin-left: 15.1%;
+    margin-left: 16%;
 }
 
 .advantage li:nth-child(3) {
-    margin-left: 13.4%;
+    margin-left: 14%;
 }
 
 .pluses {
@@ -459,7 +468,7 @@ a {
     padding-bottom: 2.8%;
 }
 
-.search-hotels button {
+.search-hotels .button-choice {
     width: 568px;
     height: 86px;
     font-size: 21px;
@@ -769,10 +778,8 @@ a {
     border-bottom: 1px solid #e5e5e5;
     align-items: center;
     list-style: none;
-    display: flex;
-    flex-direction: row;
     margin: 0;
-    padding: 2.5% 6% 2% 6%;
+    padding: 2.5% 0% 2% 0.2%;
 }
 
 .hotel-option-image {
@@ -831,7 +838,7 @@ a {
 
 .numbers,
 .booking {
-padding: 1%;
+padding: 3.5px;
 }
 
 .hotel-option-rating {
@@ -881,15 +888,13 @@ padding: 1%;
 }
 
 /*потап*/
-
-
-.search-form-sedona {
-    line-height: 26px;
-    font-weight: 700;
+.search-hotels-btn-container {
+    position: relative;
 }
-
 .search-form-sedona {
     position: absolute;
+    line-height: 26px;
+    font-weight: 700;
     padding: 0;
     height: 395px;
     background-color: #fff;
@@ -933,16 +938,25 @@ padding: 1%;
 
 .search-calendar input {
     position: relative;
-    box-sizing: border-box;
-    width: 295px;
+    width: 347px;
     min-height: 38px;
     font: inherit;
     padding: 0;
+    padding-left: 10px;
     text-transform: uppercase;
     border: 2px solid #ffffff;
     background-color: #f2f2f2;
     color: #000000;
 }
+
+.calendar{
+    position: absolute;
+    background-color: #cacaca;
+    border: none;
+    background: transparent;
+    right: 0;
+}
+
 
 .search-calendar input:hover {
     background-color: #ebebeb;
@@ -953,10 +967,6 @@ padding: 1%;
     background-color: #ffffff;
 }
 
-.calendar{
-    background-color: #cacaca;
-}
-
 .search-form2 {
     display: flex;
     align-items: center;
@@ -964,7 +974,8 @@ padding: 1%;
 }
 
 .search-form2 label {
-    vertical-align: center;
+    display: inline;
+    vertical-align: middle;
 }
 
 .number-of-kids label {
