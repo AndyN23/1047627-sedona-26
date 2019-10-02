@@ -3,9 +3,7 @@ html,
 body {
     min-width: 1200px;
 }
-/** {
-  outline: 1px solid red;
-}*/
+
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
@@ -84,7 +82,6 @@ a {
     box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
 
-
 /* общие стили для шапки*/
 
 .navigation {
@@ -139,7 +136,6 @@ a {
     padding-bottom: 15px;
 }
 
-
 .header-menu li:nth-last-of-type(2),
 .header-menu li:last-of-type {
     text-align: right;
@@ -162,7 +158,6 @@ a {
     position: relative;
     z-index: 1
 }
-
 
 .flex-row-between-center {
     display: flex;
@@ -342,7 +337,6 @@ input[type="radio"].visually-hidden {
     height: 256px;
 }
 
-
 /*достопримечательности седона 2*/
 
 .opportunities-sections {
@@ -394,7 +388,6 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: 50% 1%;
 }
-
 
 /*достопримечательности седона 3*/
 
@@ -451,7 +444,6 @@ input[type="radio"].visually-hidden {
 .advantage li:nth-child(3) {
     margin-left: 14.1%;
 }
-
 
 .pluses {
     text-align: center;
@@ -833,6 +825,10 @@ input[type="radio"].visually-hidden {
     fill: #81b3d2;
 }
 
+.active .triageunit-smaller-much {
+    fill: #81b3d2;
+}
+
 /*список гостинниц*/
 
 .list-hotels {
@@ -991,7 +987,7 @@ padding: 3.5px;
     padding: 0;
     width: 457px;
     height: 108px;
-    margin: 0 0 5.2% 9.4%;
+    margin: 0 0 4.2% 9.4%;
 }
 
 .search-form1 .search-calendar:first-child {
@@ -1034,7 +1030,8 @@ padding: 3.5px;
     background-color: #cacaca;
     border: none;
     background: transparent;
-    right: 0;
+    right: 3px;
+    top: 7px;
 }
 
 .calendar:hover .calendar-img {
@@ -1057,7 +1054,7 @@ padding: 3.5px;
 .search-form2 {
     display: flex;
     align-items: center;
-    margin: 0px auto 53px;
+    margin: 0px auto 7.6%;
 }
 
 .search-form2 label {
@@ -1065,27 +1062,27 @@ padding: 3.5px;
     vertical-align: middle;
 }
 
-.number-of-kids label {
-    margin-right: 11%;
-}
-
-.number-of-adults label {
-    margin-right: 17%;
-}
-
 .number-of-kids,
 .number-of-adults {
     margin: 0;
     padding: 0;
-    width: 284px;
-    padding-left: 10%;
+    width: 270px;
+    padding-left: 7.5%;
     text-align: center;
     display: flex;
     align-items: center;
 }
 
 .number-of-kids {
-    padding-left: 9%;
+    padding-left: 9.1%;
+}
+
+.number-of-kids label {
+    margin-right: 13%;
+}
+
+.number-of-adults label {
+    margin-right: 19%;
 }
 
 .search-form2 input {
@@ -1102,6 +1099,58 @@ padding: 3.5px;
     border: 0;
     font-weight: 700;
     background-color: #f2f2f2
+}
+
+.plus-minus {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 26px;
+    font-weight: 700;
+    color: #a9a9a9;
+    background-color: #f2f2f2;
+}
+
+.plus-minus::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 12.1px;
+    width: 12px;
+    height: 3px;
+    background-color: #a9a9a9;
+}
+
+.plus::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    width: 3px;
+    height: 11px;
+    background-color: #a9a9a9;
+}
+
+.plus-minus:hover::before {
+    background-color: #000000;
+}
+
+.plus-minus:active::before {
+    background-color: #81b3d2;
+}
+
+.plus:hover::after {
+    background-color: #000000;
+}
+
+.plus:active::after {
+    background-color: #81b3d2;
+}
+
+.field::placeholder {
+  color: #000000;
+  opacity: 1;
 }
 
 .search-form .button-more {
