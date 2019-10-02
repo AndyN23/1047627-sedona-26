@@ -19,7 +19,7 @@
               <li><a href="">Информация</a></li>
               <li><a href="">Фото и видео</a></li>
               <li><a href="">Карта штата</a></li>
-              <li><a href="catalog.html">Гостиницы</a></li>
+              <li><a class="active" href="catalog.html">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
@@ -36,19 +36,16 @@
                 <legend class="filter-form-legend">Инфраструктура:</legend>
                 <ul>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="pool" checked>
-                    Бассейн</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
+                    <label for="filter-pool">Бассейн</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="parking">
-                    Парковка</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
+                    <label for="filter-parking">Парковка</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
-                    Wi-Fi</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                    <label>Wi-Fi</label>
                   </li>
                 </ul>
               </fieldset>
@@ -56,19 +53,16 @@
                 <legend  class="filter-form-legend">Тип жилья:</legend>
                 <ul>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="hotel" checked>
-                    Гостиница</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
+                    <label for="filter-hotel">Гостиница</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-                    Мотель</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
+                    <label for="filter-motel">Мотель</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="filter-checkbox filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-                    Апартаменты</label>
+                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                    <label for="filter-apartments">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>
@@ -106,13 +100,13 @@
               <div class="triageunit">
                 <ul class="sort-much-smaller">
                   <li>
-                    <a href="" class="much" aria-label="от большего к меньшему">
-                      <img src="img/catalog/icon-up-dir.svg" alt="от большего к меньшему ">
+                    <a href="" class="much-smaller" aria-label="от большего к меньшему">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="triageunit-smaller-much" fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
                     </a>
                   </li>
                   <li>
-                    <a class="smaller" aria-label="от меньшего к большему">
-                      <img src="img/catalog/icon-down-dir.svg" alt="от меньшего к большему">
+                    <a class="smaller-smaller" aria-label="от меньшего к большему">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="triageunit-smaller-much" fill="#cacaca" d="M5.5 10L0 0h11"/></svg>
                     </a>
                   </li>
                 </ul>

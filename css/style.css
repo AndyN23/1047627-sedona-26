@@ -73,6 +73,7 @@ a {
 
 .flex-row {
     display: flex;
+    flex-wrap: wrap;
 }
 /*общие стили теневого блока*/
 .shadow-unit {
@@ -125,6 +126,7 @@ a {
 
 .header-menu {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -132,10 +134,11 @@ a {
 .header-menu li {
     width: 23%;
     text-align: left;
+    list-style: none;
     padding-top: 15px;
     padding-bottom: 15px;
-    list-style: none;
 }
+
 
 .header-menu li:nth-last-of-type(2),
 .header-menu li:last-of-type {
@@ -157,7 +160,9 @@ a {
     padding: 2% 2.9% 0 5.9%;
     margin: 0;
     position: relative;
+    z-index: 1
 }
+
 
 .flex-row-between-center {
     display: flex;
@@ -177,6 +182,7 @@ a {
 
 .footer-social ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     margin: 0;
@@ -244,6 +250,24 @@ a {
     padding-left: 5px;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*Страница 1 */
 
 /*основная информация о городе-введение*/
@@ -288,6 +312,7 @@ a {
 
 .features {
     display: flex;
+    flex-wrap: wrap;
     background-color: #81b3d2;
     color: #fff;
     padding: 0;
@@ -322,9 +347,10 @@ a {
 
 .opportunities-sections {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     padding: 0;
-    margin: 4.5% 5.4% 5.8% 6%;
+    margin: 4.7% 5.4% 5.8% 5.9%;
 }
 
 .scope {
@@ -374,6 +400,7 @@ a {
 
 .devils-bridge {
     display: flex;
+    flex-wrap: wrap;
     background-color: #81b3d2;
     color: #fff;
     padding: 0;
@@ -383,7 +410,7 @@ a {
 .devils-bridge-text {
     text-align: center;
     flex-grow: 1;
-    padding-top: 3.9%;
+    padding-top: 3.7%;
 }
 
 .devils-bridge-text p {
@@ -411,18 +438,20 @@ a {
 
 .advantage {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     margin: 0 0.3% 0 0;
-    padding: 4.5% 0% 3% 0%;
+    padding: 4.4% 0% 3% 0%;
 }
 
 .advantage li:nth-child(2) {
-    margin-left: 16%;
+    margin-left: 15.9%;
 }
 
 .advantage li:nth-child(3) {
-    margin-left: 14%;
+    margin-left: 14.1%;
 }
+
 
 .pluses {
     text-align: center;
@@ -454,7 +483,7 @@ a {
     background-color: #ffffff;
     width: 1200px;
     text-align: center;
-    padding-top: 2.3%;
+    padding-top: 2.45%;
 }
 
 .search-hotels h2 {
@@ -484,6 +513,7 @@ a {
     /*baсkground-repeat: no-repeat;*/
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: -119px;
 }
 
 /*вторая страничка*/
@@ -499,6 +529,10 @@ a {
     margin: 0px 0 9px;
 }
 
+.filter-form {
+    display: flex;
+    padding-bottom: 2.9%;
+}
 
 .filter-form fieldset {
     border: none;
@@ -506,13 +540,14 @@ a {
     padding: 0;
     border: 0;
 }
+
 .button-form {
     width: 133px;
     height: 32px;
     border: 2px solid #ffffff;
     background-color: transparent;
     text-transform: uppercase;
-    margin: 1% 0 0 26.9%;
+    margin: 1% 0 0 27.7%;
 }
 
 .button-form:hover {
@@ -527,42 +562,72 @@ a {
 
 }
 
-.filter-form {
-    display: flex;
-    padding-bottom: 2.5%;
-}
 .checkbox-filter ul {
-    width: 250px;
+    width: 252px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.filter-option {
-    margin-top: 24px;
-}
 
+.filter-option {
+    margin-top: 25px;
+}
 
 .filter-option label {
     position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
-    padding-left: 20px;
+    padding-left: 40px;
 }
+
+.filter-input-checkbox+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-on.svg);
+    background-repeat: no-repeat;
+}
+
+
+.filter-input-checkbox:disabled+label::before {
+    background-image: url(../img/catalog/checkbox-off-disabled.svg);
+}
+
+.filter-input-checkbox:checked:disabled+label::before {
+    background-image: url(../img/catalog/checkbox-on-disabled.svg);
+}
+
 
 /*сложный фильтр*/
 
 .range {
     width: 318px;
     padding: 0;
-    margin: 0 0 9px auto;
+    margin: 0 0 6px auto;
     font-size: 16px;
     line-height: 21px;
 }
 
 .price-controls {
     position: relative;
-    height: 32px;
+    height: 33px;
     margin-top: 11px;
     margin-bottom: 22px;
     border: 2px solid #ffffff;
@@ -596,12 +661,12 @@ a {
 
 .price-controls .min-price,
 .price-controls .max-price {
-    padding-left: 63px;
+    padding-left: 64px;
     padding-top: 5px;
 }
 
 .price-controls .max-price {
-    padding-left: 70px;
+    padding-left: 72px;
 }
 
 .price-controls input {
@@ -616,7 +681,7 @@ a {
 
 .range-controls {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 30.5px;
 }
 
 .range-controls .scale {
@@ -759,6 +824,15 @@ a {
     color: transparent;
     border-color: #ffffff;
 }
+
+.much-smaller:hover .triageunit-smaller-much {
+    fill: #000000;
+}
+
+.much-smaller:active .triageunit-smaller-much {
+    fill: #81b3d2;
+}
+
 /*список гостинниц*/
 
 .list-hotels {
@@ -779,7 +853,7 @@ a {
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 2.5% 0% 2% 0.2%;
+    padding: 2.55% 0% 2% 0.2%;
 }
 
 .hotel-option-image {
@@ -891,6 +965,7 @@ padding: 3.5px;
 .search-hotels-btn-container {
     position: relative;
 }
+
 .search-form-sedona {
     position: absolute;
     line-height: 26px;
@@ -903,9 +978,9 @@ padding: 3.5px;
 }
 
 .search-form {
-    width: 568px;
-    height: 395px;
-    padding-top: 9.3%;
+    width: 565px;
+    height: 394px;
+    padding-top: 9.5%;
     box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
 }
 
@@ -920,7 +995,7 @@ padding: 3.5px;
 }
 
 .search-form1 .search-calendar:first-child {
-    margin bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .search-calendar {
@@ -949,6 +1024,11 @@ padding: 3.5px;
     color: #000000;
 }
 
+.search-calendar-field::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 .calendar{
     position: absolute;
     background-color: #cacaca;
@@ -957,6 +1037,13 @@ padding: 3.5px;
     right: 0;
 }
 
+.calendar:hover .calendar-img {
+    fill: #000000;
+}
+
+.calendar:active .calendar-img {
+    fill: #81b3d2;
+}
 
 .search-calendar input:hover {
     background-color: #ebebeb;
@@ -993,7 +1080,8 @@ padding: 3.5px;
     width: 284px;
     padding-left: 10%;
     text-align: center;
-    display: flex
+    display: flex;
+    align-items: center;
 }
 
 .number-of-kids {
@@ -1026,12 +1114,3 @@ padding: 3.5px;
     transform: translateX(-50%);
 }
 
-/*
-.сalendar,
-.calendar:active,
-.calendar:hover {
-    width: 22px;
-    height: 22px;
-    background-color: #cacaca;
-}
-*/
