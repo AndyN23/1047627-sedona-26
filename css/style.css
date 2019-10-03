@@ -246,21 +246,18 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+input[type="checkbox"].hidden,
+input[type="radio"].hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /*Страница 1 */
@@ -643,7 +640,7 @@ input[type="radio"].visually-hidden {
     vertical-align: top;
     cursor: pointer;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
 .price-controls input {
@@ -663,12 +660,19 @@ input[type="radio"].visually-hidden {
 
 .price-controls input {
     width: 50px;
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
     color: inherit;
     font: inherit;
     background: none;
     border: none;
+}
+
+.price-controls input[type="text"] {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: transparent;
+    padding-top: 4px;
 }
 
 .range-controls {
@@ -805,13 +809,6 @@ input[type="radio"].visually-hidden {
     margin-right: 10px
 }
 
-.price-controls input[type="text"] {
-    font: inherit;
-    color: #ffffff;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-}
-
 .filter-option input {
     color: transparent;
     border-color: #ffffff;
@@ -908,7 +905,7 @@ input[type="radio"].visually-hidden {
 
 .numbers,
 .booking {
-padding: 3.5px;
+    padding: 3.5px;
 }
 
 .hotel-option-rating {
@@ -1021,8 +1018,8 @@ padding: 3.5px;
 }
 
 .search-calendar-field::placeholder {
-  color: #000000;
-  opacity: 1;
+    color: #000000;
+    opacity: 1;
 }
 
 .calendar{
