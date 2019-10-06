@@ -152,7 +152,7 @@ a {
 }
 
 .header-menu li:nth-last-of-type(3) {
-    margin-right: auto;
+    margin-right: 8%;
 }
 
 /*общие стили для подвала*/
@@ -163,7 +163,7 @@ a {
     color: #000000;
     min-width: 1200px;
     min-height: 120px;
-    padding: 2% 2.9% 0 5.9%;
+    padding: 2% 2.8% 0 5.7%;
     margin: 0;
     position: relative;
     z-index: 1
@@ -248,9 +248,24 @@ a {
     line-height: 26px
 }
 
-.academy-btn svg {
+.academy-btn {
+    position: relative;
     width: 115px;
     height: 41px;
+}
+
+.academy-btn::before {
+    position: absolute;
+    bottom: -13px;
+    left: 5px;
+    z-index: 1;
+    display: block;
+    width: 115px;
+    height: 41px;
+    content: "";
+}
+
+.academy-btn svg {
     display: inline-block;
     vertical-align: middle;
 }
@@ -309,7 +324,7 @@ input[type="radio"].hidden {
     min-height: 508px;
     background-image: url(../img/index/polygon.png),url(../img/index/background_photo.jpg);
     background-repeat: no-repeat;
-    background-position: 0 100.1%, 0 29%;
+    background-position: 0 100.1%, 0 28.5%;
 }
 
 .photo-mountain {
@@ -351,12 +366,16 @@ input[type="radio"].hidden {
     margin: 50px 0 0;
 }
 
+.item {
+    padding: 45px;
+    width: 400px;
+}
+
 .features-text {
     text-align: center;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    padding-top: 47px;
 }
 
 .features-text p {
@@ -364,7 +383,8 @@ input[type="radio"].hidden {
 }
 .features-text h2 {
     margin: 0;
-    padding-bottom: 23px;
+    padding-bottom: 25px;
+    line-height: 22px;
 }
 .features-text p:last-of-type {
     margin: 0;
@@ -388,7 +408,7 @@ input[type="radio"].hidden {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 0;
-    margin: 4.7% 5.4% 5.8% 5.9%;
+    margin: 4.5% 0% 2.1% 0%;
 }
 
 .scope {
@@ -396,22 +416,12 @@ input[type="radio"].hidden {
     list-style: none;
 }
 
-.opportunities-sections li:nth-child(2) {
-    margin: 0 auto 0 12.5%;
-}
-
-.scope-home {
-    margin-top: 40.8%;
-}
-.scope-eat {
-    margin-top: 36.3%;
-}
-.scope-souvenirs {
-    margin-top: 38%;
+.scope h3 {
+    margin-top: 18.6%;
 }
 
 .opportunities-sections h3 {
-   font-size: 21px;
+    font-size: 21px;
     line-height: 26px;
     padding-top: 0%;
 }
@@ -424,7 +434,7 @@ input[type="radio"].hidden {
 .eat {
     background-image: url(../img/index/icon-2.svg);
     background-repeat: no-repeat;
-    background-position: 51% 5%;
+    background-position: 50% 4%;
 }
 
 .souvenirs {
@@ -452,7 +462,6 @@ input[type="radio"].hidden {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    padding-top: 3.7%;
 }
 
 .devils-bridge-text p {
@@ -461,7 +470,8 @@ input[type="radio"].hidden {
 
 .devils-bridge-text h2 {
     margin: 0;
-    padding-bottom: 5.7%;
+    padding-bottom: 7.3%;
+    line-height: 22px;
 }
 
  .devils-bridge-text p:last-of-type {
@@ -487,16 +497,13 @@ input[type="radio"].hidden {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin: 0 0.3% 0 0;
-    padding: 4.4% 0% 3% 0%;
+    margin: 0;
+    padding: 0;
 }
 
-.advantage li:nth-child(2) {
-    margin-left: 15.9%;
-}
-
-.advantage li:nth-child(3) {
-    margin-left: 14.1%;
+.list-of-attractions .item {
+    padding: 46px 45px 37px 45px;
+    width: 400px;
 }
 
 .pluses {
@@ -508,19 +515,11 @@ input[type="radio"].hidden {
 
 .pluses h3 {
     font-size: 21px;
-    margin:  0 0 9% 0;
-}
-
-.pluses .pluses1 {
-    margin:  0 0 11% 0;
+    margin:  0 0 7.8% 0;
 }
 
 .pluses p {
-    margin:  0 0 8% 0;
-}
-
-.pluses .pluses2 {
-    margin: 10% 0 0 0;
+    margin:  0 0 6.7% 0;
 }
 
 /*блок поиска отеля*/
@@ -529,7 +528,7 @@ input[type="radio"].hidden {
     background-color: #ffffff;
     width: 1200px;
     text-align: center;
-    padding-top: 2.45%;
+    padding-top: 2.3%;
 }
 
 .search-hotels h2 {
@@ -540,7 +539,7 @@ input[type="radio"].hidden {
 
 .search-hotels p {
     line-height: 24px;
-    padding-bottom: 2.8%;
+    padding-bottom: 2.7%;
 }
 
 .search-hotels .button-choice {
@@ -579,7 +578,9 @@ input[type="radio"].hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 2.9%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 2.7%;
 }
 
 .filter-form fieldset {
@@ -587,21 +588,6 @@ input[type="radio"].hidden {
     margin-top: 27px;
     padding: 0;
     border: 0;
-}
-
-.button-form {
-    width: 133px;
-    height: 32px;
-    border: 2px solid #ffffff;
-    background-color: transparent;
-    text-transform: uppercase;
-    margin: 1% 0 0 27.7%;
-}
-
-.button-form:hover {
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
-    color: #000000;
 }
 
 .filter-form-legend {
@@ -675,7 +661,7 @@ input[type="radio"].hidden {
 .range {
     width: 318px;
     padding: 0;
-    margin: 0 0 6px auto;
+    margin: 0 0 6px 228px;
     font-size: 16px;
     line-height: 21px;
 }
@@ -719,7 +705,7 @@ input[type="radio"].hidden {
 .price-controls .min-price,
 .price-controls .max-price {
     padding-left: 64px;
-    padding-top: 5px;
+    padding-top: 4px;
 }
 
 .price-controls .max-price {
@@ -762,7 +748,7 @@ input[type="radio"].hidden {
 .range-toggle {
     position: absolute;
     top: -9px;
-    width: 22px;
+    width: 20px;
     height: 22px;
     background: #ababab;
     border: 8px solid #ffffff;
@@ -783,6 +769,22 @@ input[type="radio"].hidden {
 
 .range-toggle-max {
     left: 80%;
+}
+
+.button-form {
+    width: 135px;
+    height: 34px;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin: 0.9% 0 0 27.1%;
+}
+
+.button-form:hover {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000000;
 }
 
 /*блок сортировка*/
@@ -896,6 +898,22 @@ input[type="radio"].hidden {
     border-color: #ffffff;
 }
 
+.much-smaller {
+    position: relative;
+    width: 11px;
+    height: 10px;
+}
+
+.much-smaller::before {
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    display: block;
+    width: 11px;
+    height: 10px;
+    content: "";
+}
+
 .much-smaller:hover .triageunit-smaller-much {
     fill: #000000;
 }
@@ -907,6 +925,7 @@ input[type="radio"].hidden {
 .active .triageunit-smaller-much {
     fill: #81b3d2;
 }
+
 
 /*список гостинниц*/
 
@@ -968,6 +987,7 @@ input[type="radio"].hidden {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 550px;
 }
 
 .search-hotel-info{
@@ -1026,7 +1046,7 @@ input[type="radio"].hidden {
 
 .rating {
     margin: 0;
-    padding: 0 0;
+    padding: 0;
     text-align: right;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1042,7 +1062,7 @@ input[type="radio"].hidden {
     display: flex;
     width: 18px;
     height: 17px;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 6px;
     padding: 0 2px 0 0;
     color: #81b3d2;
     background-image: url(../img/catalog/zvezda.svg);
@@ -1088,9 +1108,15 @@ input[type="radio"].hidden {
 .search-form {
     width: 565px;
     height: 394px;
-    padding-top: 9.5%;
+    padding-top: 9.3%;
     -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
+}
+
+.search-form fieldset {
+    border: none;
+    padding: 0;
+    border: 0;
 }
 
 .search-form1 {
@@ -1107,7 +1133,7 @@ input[type="radio"].hidden {
     padding: 0;
     width: 457px;
     height: 108px;
-    margin: 0 0 4.2% 9.4%;
+    margin: 0 0 5% 9.4%;
 }
 
 .search-form1 .search-calendar:first-child {
@@ -1204,7 +1230,7 @@ input[type="radio"].hidden {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0px auto 7.6%;
+    margin: 0 0 9.5% 7.6%;
 }
 
 .search-form2 label {
@@ -1216,8 +1242,8 @@ input[type="radio"].hidden {
 .number-of-adults {
     margin: 0;
     padding: 0;
-    width: 270px;
-    padding-left: 7.5%;
+    width: 235px;
+    padding-left: 2.5%;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1228,11 +1254,11 @@ input[type="radio"].hidden {
 }
 
 .number-of-kids {
-    padding-left: 9.1%;
+    padding-left: 11.5%;
 }
 
 .number-of-kids label {
-    margin-right: 13%;
+    margin-right: 17%;
 }
 
 .number-of-adults label {
