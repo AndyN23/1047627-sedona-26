@@ -1,6 +1,8 @@
-var button=document.querySelector(".button-searh");
-var form=document.querySelector(".search-form");
-var dateOfArrival=form.querySelector("[name=date-of-arrival]");
+
+var button = document.querySelector(".button-searh");
+var form = document.querySelector(".search-form");
+var dateOfArrival = form.querySelector("[name=date-of-arrival]");
+
 var minus = document.querySelector('.minus');
 var plus = document.querySelector('.plus');
 var result = document.querySelector('.number');
@@ -9,9 +11,10 @@ var plusKids = document.querySelector('.number-of-kids .plus');
 var resultKids = document.querySelector('.number-of-kids .number');
 
 form.classList.add("hidden");
+
 button.addEventListener("click",function(e){
   e.preventDefault();
-  form.classList.toggle(".search-form-show");
+  form.classList.toggle("search-form-show");
   dateOfArrival.focus();
 });
 
