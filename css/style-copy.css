@@ -211,7 +211,7 @@ a {
 
 }
 .footer-social li {
-    margin:6px 0 6px 6px;
+    margin: 6px 0 6px 6px;
     list-style: none;
 }
 
@@ -573,6 +573,7 @@ input[type="radio"].hidden {
 
 .search-hotels .button-choice {
     display: inline-block;
+    vertical-align: middle;
     width: 568px;
     padding-top: 29px;
     padding-bottom: 29px;
@@ -882,6 +883,7 @@ input[type="radio"].hidden {
 
 .sort-characteristic a {
     display: inline-block;
+    vertical-align: middle;
     margin-right: 30px;
     vertical-align: bottom;
     color: #000000;
