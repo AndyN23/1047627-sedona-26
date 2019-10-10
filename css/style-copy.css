@@ -66,7 +66,7 @@ a {
 
 .inner {
     margin: 0 0;
-    padding: 0 6% 0 5.8%;
+    padding: 0 6% 0 5.9%;
 }
 
 .flex-row {
@@ -77,7 +77,7 @@ a {
         flex-wrap: wrap;
 }
 /*общие стили теневого блока*/
-.shadow-unit {
+.shadow-block {
     width: 1200px;
     background-color: #fff;
     margin-right: auto;
@@ -107,6 +107,7 @@ a {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+    z-index: 1;
 }
 
 .navigation a {
@@ -142,8 +143,12 @@ a {
     width: 23%;
     text-align: left;
     list-style: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+}
+
+.header-menu li:nth-child(3) {
+    word-spacing: 1.5px;
 }
 
 .header-menu li:nth-last-of-type(2),
@@ -206,7 +211,7 @@ a {
 
 }
 .footer-social li {
-    margin-left: 6px;
+    margin:6px 0 6px 6px;
     list-style: none;
 }
 
@@ -245,13 +250,14 @@ a {
 
 .footer-copyright {
     font-size: 14px;
-    line-height: 26px
+    line-height: 26px;
 }
 
 .academy-btn {
     position: relative;
     width: 115px;
     height: 41px;
+    padding-left: 5px;
 }
 
 .academy-btn::before {
@@ -281,10 +287,11 @@ a {
 .inscription-logo {
     text-align: center;
     line-height: 26px;
+    width: 200px;
 }
 
-.academy-btn {
-    padding-left: 5px;
+.logo-htmlacademy {
+padding-top: 1px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -308,43 +315,54 @@ input[type="radio"].hidden {
 /*основная информация о городе-введение*/
 
 .main-photo-mountain {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    position: relative;
     min-height: 508px;
-    background-image: url(../img/index/polygon.png),url(../img/index/background_photo.jpg);
+    background-color: #808080;
+    background-image: url(../img/index/background-mountains.jpg);
     background-repeat: no-repeat;
-    background-position: 0 100.1%, 0 28.5%;
+    background-position:  0 28.5%;
+    padding-top: 6.3%;
+}
+
+.main-photo-mountain:before {
+    position: absolute;
+    content: "";
+    top: 89%;
+    right: 0;
+    width: 1200px;
+    height: 59px;
+    background-image: url(../img/index/intro-mask.svg);
+    background-repeat: no-repeat;
 }
 
 .photo-mountain {
-    width: 459px;
-    height: 353px;
-    background-position: center;
+    display: block;
+    margin: 0 auto;
 }
+
 .sights-Sedona {
-    margin-top: 5%;
+    margin-top: 60px;
 }
+
 .brief-description {
     background-color: #ffffff;
     text-align: center;
     line-height: 26px;
 }
 
+
 .brief-description h2 {
+    width : 600px;
+    margin: 0 300px;
     font-size: 21px;
     font-weight: 700;
-    padding-bottom: 0.9%;
+    padding-bottom: 27px;
+}
+
+.brief-description p {
+    width: 600px;
+    margin: 0 300px;
+
 }
 
 .main-photo-mountain div:nth-child(2) {
@@ -363,12 +381,12 @@ input[type="radio"].hidden {
     background-color: #81b3d2;
     color: #fff;
     padding: 0;
-    margin: 50px 0 0;
+    margin: 51px 0 0;
 }
 
 .item {
     padding: 45px;
-    width: 400px;
+    width: 390px;
 }
 
 .features-text {
@@ -381,14 +399,20 @@ input[type="radio"].hidden {
 .features-text p {
     margin: 0;
 }
+
 .features-text h2 {
+    width: 60%;
+    text-align: center;
     margin: 0;
-    padding-bottom: 25px;
+    margin: 1px 0 24px 63px;
     line-height: 22px;
+    letter-spacing: 0.3px;
 }
+
 .features-text p:last-of-type {
-    margin: 0;
-    padding-top: 21px;
+    width: 100%;
+    margin: 0 0 0;
+    padding: 20px 11px 0;
 }
 
 .features-photo {
@@ -408,7 +432,7 @@ input[type="radio"].hidden {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 0;
-    margin: 4.5% 0% 2.1% 0%;
+    margin: 50px 0 24.5px 0;
 }
 
 .scope {
@@ -416,31 +440,39 @@ input[type="radio"].hidden {
     list-style: none;
 }
 
+.scope:first-child {
+    margin-left: 5px;
+}
+
+.scope:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 11px;
+}
+
 .scope h3 {
-    margin-top: 18.6%;
+    margin-top: 63px;
 }
 
 .opportunities-sections h3 {
     font-size: 21px;
     line-height: 26px;
-    padding-top: 0%;
 }
 
 .home {
     background-image: url(../img/index/icon-1.svg);
     background-repeat: no-repeat;
-    background-position: 50% 4%;
+    background-position: 50% 5%;
 }
 .eat {
     background-image: url(../img/index/icon-2.svg);
     background-repeat: no-repeat;
-    background-position: 50% 4%;
+    background-position: 50% 5%;
 }
 
 .souvenirs {
     background-image: url(../img/index/icon-3.svg);
     background-repeat: no-repeat;
-    background-position: 50% 1%;
+    background-position: 50% 2%;
 }
 
 /*достопримечательности седона 3*/
@@ -469,8 +501,7 @@ input[type="radio"].hidden {
 }
 
 .devils-bridge-text h2 {
-    margin: 0;
-    padding-bottom: 7.3%;
+    margin: 0 70px 22px;
     line-height: 22px;
 }
 
@@ -494,68 +525,68 @@ input[type="radio"].hidden {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-}
 
-.list-of-attractions .item {
-    padding: 46px 45px 37px 45px;
-    width: 400px;
+            justify-content: space-around;
+    margin: 0;
+    padding: 2px 0 0;
 }
 
 .pluses {
     text-align: center;
     list-style: none;
-    padding: 0;
+    width: 360px;
     margin: 0;
+    padding-bottom: 35px;
 }
 
 .pluses h3 {
     font-size: 21px;
-    margin:  0 0 7.8% 0;
+    margin: 0 60px 22px;
 }
 
 .pluses p {
-    margin:  0 0 6.7% 0;
+    margin:  0 0 23px 0;
 }
 
 /*блок поиска отеля*/
 
+
 .search-hotels {
     background-color: #ffffff;
-    width: 1200px;
     text-align: center;
-    padding-top: 2.3%;
+    margin-top: 4.3%;
 }
 
 .search-hotels h2 {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
+    margin: 0;
 }
 
 .search-hotels p {
+    width: 490px;
     line-height: 24px;
-    padding-bottom: 2.7%;
+    margin: 0 354px 26px;
+    padding: 23px;
 }
 
 .search-hotels .button-choice {
+    display: inline-block;
     width: 568px;
-    height: 86px;
+    padding-top: 29px;
+    padding-bottom: 29px;
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
     margin: auto;
 }
 
+
 /*карта*/
 .map {
     height: 593px;
     background-image: url(../img/index/map.jpg);
-    /*baсkground-repeat: no-repeat;*/
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -119px;
@@ -566,6 +597,7 @@ input[type="radio"].hidden {
 /*секция фильтры*/
 
 .filter {
+    background-color: #4178a1;
     background-image: url(../img/catalog/filter.jpg);
     background-repeat: no-repeat;
     color: #ffffff;
@@ -580,7 +612,7 @@ input[type="radio"].hidden {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-bottom: 2.7%;
+    padding-bottom: 27px;
 }
 
 .filter-form fieldset {
@@ -593,11 +625,14 @@ input[type="radio"].hidden {
 .filter-form-legend {
     font-size: 16px;
     font-weight: 700;
+}
 
+.filter-form-legend {
+    word-spacing: 1.5px;
 }
 
 .checkbox-filter ul {
-    width: 252px;
+    width: 251px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -609,7 +644,6 @@ input[type="radio"].hidden {
 
 .filter-option label {
     position: relative;
-    display: block;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -647,30 +681,29 @@ input[type="radio"].hidden {
 }
 
 
-.filter-input-checkbox:disabled+label::before {
+.filter-input-checkbox:disabled + label::before {
     background-image: url(../img/catalog/checkbox-off-disabled.svg);
 }
 
-.filter-input-checkbox:checked:disabled+label::before {
+.filter-input-checkbox:checked:disabled + label::after {
     background-image: url(../img/catalog/checkbox-on-disabled.svg);
 }
-
 
 /*сложный фильтр*/
 
 .range {
     width: 318px;
     padding: 0;
-    margin: 0 0 6px 228px;
+    margin: 0 0 6px auto;
     font-size: 16px;
     line-height: 21px;
 }
 
 .price-controls {
     position: relative;
-    height: 33px;
+    height: 34px;
     margin-top: 11px;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
     border: 2px solid #ffffff;
     border-radius: 2px;
 }
@@ -772,13 +805,12 @@ input[type="radio"].hidden {
 }
 
 .button-form {
-    width: 135px;
-    height: 34px;
+    padding: 5px 33px;
     font-size: 14px;
     border: 2px solid #ffffff;
     background-color: transparent;
     text-transform: uppercase;
-    margin: 0.9% 0 0 27.1%;
+    margin: 2px 0 0 87px;
 }
 
 .button-form:hover {
@@ -792,6 +824,7 @@ input[type="radio"].hidden {
     font-size: 21px;
     font-weight: 700;
     line-height: 26px;
+    max-width: 250px;
 }
 
 .sort li {
@@ -799,7 +832,7 @@ input[type="radio"].hidden {
 }
 
 .sort {
-    padding: 0 0 0.7% 0;
+    padding: 0 0 9px 0;
     margin: 0;
 }
 
@@ -828,6 +861,7 @@ input[type="radio"].hidden {
 }
 
 .sort-list {
+    max-width: 250px;
     margin-left: 50px;
     vertical-align: bottom;
     padding: 3px 0 0 0;
@@ -843,6 +877,7 @@ input[type="radio"].hidden {
     padding: 3px 0 0 0;
     margin: 0 0 0 39px;
     vertical-align: bottom;
+    width: 400px;
 }
 
 .sort-characteristic a {
@@ -886,7 +921,7 @@ input[type="radio"].hidden {
 }
 .triageunit {
     padding: 0;
-    margin: 1% 3.2% 0 0;
+    margin: 11px 33px 0 0;
 }
 
 .sort-much-smaller li {
@@ -949,11 +984,11 @@ input[type="radio"].hidden {
             align-items: center;
     list-style: none;
     margin: 0;
-    padding: 2.55% 0% 2% 0.2%;
+    padding: 30px 0 24px 2px;
 }
 
 .hotel-option-image {
-    padding-right: 2.6%;
+    padding-right: 27px;
 }
 
 .name-hotel a {
@@ -961,8 +996,9 @@ input[type="radio"].hidden {
     font-size: 21px;
     font-weight: 700;
     line-height: 21px;
+    word-spacing: 1.5px;
     position: relative;
-    bottom: 5px;
+    bottom: 3px;
     left: 2px;
 }
 
@@ -1001,26 +1037,11 @@ input[type="radio"].hidden {
 }
 
 .numbers .button-more {
-    width: 110px;
-    height: 27px;
+    padding: 3.5px 16px;
 }
 
 .booking .button-choice {
-    width: 142px;
-    height: 27px;
-}
-
-.button-more,
-.button-choice {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 3.5px 17px;
 }
 
 .numbers,
@@ -1065,7 +1086,7 @@ input[type="radio"].hidden {
     margin: 0 0 0 6px;
     padding: 0 2px 0 0;
     color: #81b3d2;
-    background-image: url(../img/catalog/zvezda.svg);
+    background-image: url(../img/catalog/star.svg);
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -1084,7 +1105,7 @@ input[type="radio"].hidden {
 .numbers p,
 .booking p {
     padding-top: 0;
-    margin-top: 0;
+    margin: 0 0 17px;
 }
 
 /*потап*/
@@ -1108,7 +1129,7 @@ input[type="radio"].hidden {
 .search-form {
     width: 565px;
     height: 394px;
-    padding-top: 9.3%;
+    padding-top: 56px;
     -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .1);
 }
@@ -1132,12 +1153,12 @@ input[type="radio"].hidden {
             justify-content: space-between;
     padding: 0;
     width: 457px;
-    height: 108px;
-    margin: 0 0 5% 9.4%;
+    height: 100px;
+    margin: 0 0 34px 54px;
 }
 
-.search-form1 .search-calendar:first-child {
-    margin-bottom: 20px;
+.search-form1 .search-calendar:first-of-type {
+    margin-bottom: 28px;
 }
 
 .search-calendar {
@@ -1230,7 +1251,7 @@ input[type="radio"].hidden {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 0 9.5% 7.6%;
+    margin: 0 0 1px 39px;
 }
 
 .search-form2 label {
@@ -1242,8 +1263,8 @@ input[type="radio"].hidden {
 .number-of-adults {
     margin: 0;
     padding: 0;
-    width: 235px;
-    padding-left: 2.5%;
+    width: 240px;
+    padding-left: 15px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1254,15 +1275,15 @@ input[type="radio"].hidden {
 }
 
 .number-of-kids {
-    padding-left: 11.5%;
+    padding-left: 50px;
 }
 
 .number-of-kids label {
-    margin-right: 17%;
+    margin-right: 30px;
 }
 
 .number-of-adults label {
-    margin-right: 19%;
+    margin-right: 40px;
 }
 
 .search-form2 input {
@@ -1356,13 +1377,9 @@ input[type="radio"].hidden {
 .search-form .button-more {
     text-transform: uppercase;
     font-size: 21px;
-    width: 458px;
-    height: 58px;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    padding: 17px 197px;
+    margin:52px;
+    text-align: center;
 }
 
 .search-form-show {
