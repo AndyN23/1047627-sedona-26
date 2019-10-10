@@ -21,20 +21,20 @@ button.addEventListener("click",function(e){
 
 minus.addEventListener('click', function(){
   if (result.value > 0){
-    result.value--
+    result.value--;
   }
 });
 
 plus.addEventListener('click', function(){
-  result.value++
-})
+  result.value++;
+});
 
 minusKids.addEventListener('click', function(){
   if (resultKids.value > 0){
-    resultKids.value--
-  }
+    resultKids.value--;
+  };
 });
 
 plusKids.addEventListener('click', function(){
-  resultKids.value++
-})
+  resultKids.value++;
+});

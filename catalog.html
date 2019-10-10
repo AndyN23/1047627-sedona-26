@@ -3,17 +3,17 @@
    <head>
      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
      <title>HTML Academy: Седона</title>
+     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
      <link href="css/normalize.css" rel="stylesheet">
      <link href="css/style.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
    </head>
 <body>
-  <div class="shadow-unit">
+  <div class="shadow-block">
     <header class="main-header">
         <div class="inner">
           <nav class="navigation">
             <a class="header-logo" href="index.html" aria-label="Логотип города Седона">
-              <img src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
+              <img src="img/logo-sedona.svg" alt="Логотип города Седона" width="140" height="72">
             </a>
             <ul class="header-menu">
               <li><a href="">Информация</a></li>
@@ -25,26 +25,26 @@
         </div>
     </header>
     <main>
-      <h1 class="hidden">Каталог гостиниц города Седона
+      <h1 class="visually-hidden">Каталог гостиниц города Седона
       </h1>
       <section class="filter">
         <div class="inner">
-          <h2 class="hidden">Выбираем нужный вариант.</h2>
+          <h2 class="visually-hidden">Выбираем нужный вариант.</h2>
         <!--формa -->
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="checkbox-filter">
                 <legend class="filter-form-legend">Инфраструктура:</legend>
                 <ul>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-pool" name="pool" checked>
                     <label for="filter-pool">Бассейн</label>
                   </li>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-parking" name="parking">
                     <label for="filter-parking">Парковка</label>
                   </li>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
                     <label for="filter-wifi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -53,15 +53,15 @@
                 <legend  class="filter-form-legend">Тип жилья:</legend>
                 <ul>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-hotel" name="hotel" checked>
                     <label for="filter-hotel">Гостиница</label>
                   </li>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" id="filter-motel" name="motel" checked>
                     <label for="filter-motel">Мотель</label>
                   </li>
                   <li class="filter-option">
-                    <input class="hidden filter-checkbox filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                    <input class="visually-hidden filter-checkbox filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
                     <label for="filter-apartments">Апартаменты</label>
                   </li>
                 </ul>
@@ -78,8 +78,12 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+                  <div class="range-toggle range-toggle-min">
+                    <span class="visually-hidden">Ползунок: цена от</span>
+                  </div>
+                  <div class="range-toggle range-toggle-max">
+                    <span class="visually-hidden">Ползунок: цена до</span>
+                  </div>
                 </div>
                 <button class="button button-form" type="submit">Показать</button>
               </fieldset>
@@ -88,7 +92,7 @@
       </section>
       <section class="sort">
         <div class="inner">
-          <h2 class="hidden">Отбираем по цене, типу или рейтингу.</h2>
+          <h2 class="visually-hidden">Отбираем по цене, типу или рейтингу.</h2>
           <div class="sort-wrapper">
               <div class="sort1">
                 <p class="found">Найдено: 3</p>
@@ -117,14 +121,14 @@
         </div>
       </section>
       <section class="list-hotels">
-        <h2 class="hidden">Список гостинниц.</h2>
+        <h2 class="visually-hidden">Список гостинниц.</h2>
         <ul class="hotel">
           <li class="hotel-option">
             <div class="inner">
               <div class="flex-row">
                 <div class="hotel-option-image">
                   <a href="" aria-label="гостинница amara">
-                    <img src="img/catalog/catalog1.jpg" width="135" height="90" alt="гостинница amara">
+                    <img src="img/catalog/catalog-1.jpg" width="135" height="90" alt="гостинница amara">
                   </a>
                 </div>
                 <div class="name-hotel-item-more">
@@ -143,7 +147,7 @@
                   </div>
                 </div>
                 <div class="hotel-option-rating">
-                  <p class="hidden">4 звездoчки</p>
+                  <p class="visually-hidden">4 звездoчки</p>
                   <div class="rating">
                     <span class="icon-star"></span>
                     <span class="icon-star"></span>
@@ -160,7 +164,7 @@
               <div class="flex-row">
                 <div class="hotel-option-image">
                   <a href="" aria-label="гостинница desert">
-                    <img src="img/catalog/catalog2.jpg" width="135" height="90" alt="гостинница desert">
+                    <img src="img/catalog/catalog-2.jpg" width="135" height="90" alt="гостинница desert">
                   </a>
                 </div>
                 <div class="name-hotel-item-more">
@@ -179,7 +183,7 @@
                   </div>
                 </div>
                 <div class="hotel-option-rating">
-                  <p class="hidden">3 звездoчки</p>
+                  <p class="visually-hidden">3 звездoчки</p>
                   <div class="rating">
                     <span class="icon-star"></span>
                     <span class="icon-star"></span>
@@ -195,7 +199,7 @@
                 <div class="flex-row">
                   <div class="hotel-option-image">
                     <a href="" aria-label="гостинница villas">
-                      <img src="img/catalog/catalog3.jpg" width="135" height="90" alt="гостинница villas">
+                      <img src="img/catalog/catalog-3.jpg" width="135" height="90" alt="гостинница villas">
                     </a>
                   </div>
                   <div class="name-hotel-item-more">
@@ -214,7 +218,7 @@
                     </div>
                   </div>
                   <div class="hotel-option-rating">
-                    <p class="hidden">2 звездoчки</p>
+                    <p class="visually-hidden">2 звездoчки</p>
                     <div class="rating">
                       <span class="icon-star"></span>
                       <span class="icon-star"></span>
@@ -232,7 +236,7 @@
         <div class="flex-row-between-center">
           <h2 class="footer-hashtag">#visitSEDONA</h2>
           <div class="footer-social">
-            <h2 class="hidden">Мы в социальных сетях</h2>
+            <h2 class="visually-hidden">Мы в социальных сетях</h2>
             <ul>
               <li>
                 <a class="social-button twitter" href="" aria-label="twitter">
