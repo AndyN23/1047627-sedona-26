@@ -10,7 +10,7 @@ var minusKids = document.querySelector('.number-of-kids .minus');
 var plusKids = document.querySelector('.number-of-kids .plus');
 var resultKids = document.querySelector('.number-of-kids .number');
 
-form.classList.add("hidden");
+form.classList.add("search-form-hide");
 
 button.addEventListener("click",function(e){
   e.preventDefault();
