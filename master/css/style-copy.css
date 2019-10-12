@@ -34,7 +34,7 @@ a {
     border: none;
 }
 
-.hidden {
+.visually-hidden {
     display: none;
 }
 
@@ -291,7 +291,7 @@ a {
 }
 
 .logo-htmlacademy {
-padding-top: 1px;
+    padding-top: 1px;
 }
 
 .visually-hidden:not(:focus):not(:active),
