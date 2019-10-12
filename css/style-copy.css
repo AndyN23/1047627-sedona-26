@@ -34,7 +34,7 @@ a {
     border: none;
 }
 
-.visually-hidden {
+.search-form-hide {
     display: none;
 }
 
@@ -295,8 +295,8 @@ a {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].hidden,
-input[type="radio"].hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
